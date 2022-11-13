@@ -8,9 +8,9 @@ function createGame(player1, hour, player2) {
   `
 }
 
-let delay = -0.4;
+let delay = -0.4
 function createCard(date, day, games) {
-  delay = delay + 0.4;
+  delay = delay + 0.4
   return `
     <div class="card" style="animation-delay: ${delay}s">
       <h2>${date} <span>${day}</span></h2>
@@ -30,3 +30,21 @@ document.querySelector("#cards").innerHTML =
       createGame("portugal", "16:00", "uruguai")
   ) +
   createCard("02/12", "sexta", createGame("brazil", "16:00", "cameroon"))
+  
+  let changeColor = document.querySelector("body")
+
+function yellowCard () {
+  changeColor.classList.remove("green")
+  changeColor.classList.remove("blue")
+  changeColor.classList.add("yellow")
+}
+function blueCard () {
+  changeColor.classList.remove("yellow")
+  changeColor.classList.remove("green")
+  changeColor.classList.add("blue")
+}
+function greenCard () {
+  changeColor.classList.remove("yellow")
+  changeColor.classList.remove("blue")
+  changeColor.classList.add("green")
+}
