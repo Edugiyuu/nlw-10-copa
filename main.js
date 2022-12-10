@@ -36,15 +36,12 @@ document.querySelector("#cards").innerHTML =
 function yellowCard () {
   changeColor.classList.remove("green")
   changeColor.classList.remove("blue")
-  changeColor.classList.add("yellow")
 }
 function blueCard () {
-  changeColor.classList.remove("yellow")
   changeColor.classList.remove("green")
   changeColor.classList.add("blue")
 }
 function greenCard () {
-  changeColor.classList.remove("yellow")
   changeColor.classList.remove("blue")
   changeColor.classList.add("green")
 }
